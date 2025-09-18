@@ -29,6 +29,13 @@
             {
               "client_id": "1033256263772-l83vvc9spuht0a0t7dvu63rgm56ps3v8.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "1033256263772-b1be8rm5i69e85jqk1ciive010fr69em.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gamley1.spaxey.dev"
+              }
             }
           ]
         }
