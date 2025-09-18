@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/widgets.dart';
 import 'package:powersync_repository/powersync_repository.dart';
 import 'package:shared/shared.dart';
@@ -27,6 +28,7 @@ class AppBlocObserver extends BlocObserver {
 
 Future<void> bootstrap(
   AppBuilder builder, {
+  required FirebaseOptions options,
   required bool isDev,
 }) async {
   FlutterError.onError = (details) {
@@ -38,6 +40,8 @@ Future<void> bootstrap(
   await runZonedGuarded(
     () async {
       WidgetsFlutterBinding.ensureInitialized();
+
+      await Firebase.initializeApp(options: options);
 
       final powersyncRepository = PowerSyncRepository(isDev: isDev);
       await powersyncRepository.initialize();
