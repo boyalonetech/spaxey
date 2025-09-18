@@ -11,6 +11,7 @@ dependencies:
     path: packages/api_repository
 
   bloc: ^9.0.0
+  firebase_core: ^4.1.0
   flutter:
     sdk: flutter
   flutter_bloc: ^9.1.1

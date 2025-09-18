@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "234716053312",
+    "project_id": "spaxey-stg",
+    "storage_bucket": "spaxey-stg.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234716053312:android:fc34d7948a0986b4e844a5",
+        "android_client_info": {
+          "package_name": "com.gambley1.spaxey.stg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "234716053312-sht342hnrde877vqicalbv6ffv0fn3t1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhZsIycNzRX0VNgEKcPFpXh0rw2J9e4hI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "234716053312-sht342hnrde877vqicalbv6ffv0fn3t1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
