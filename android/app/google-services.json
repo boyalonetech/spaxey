@@ -1,34 +1,77 @@
 {
   "project_info": {
-    "project_number": "1033256263772",
-    "project_id": "spaxey",
-    "storage_bucket": "spaxey.firebasestorage.app"
+    "project_number": "427124386853",
+    "project_id": "spaxey-prod-8a663",
+    "storage_bucket": "spaxey-prod-8a663.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1033256263772:android:8888782251998b989e8699",
+        "mobilesdk_app_id": "1:427124386853:android:69be2e64fa9862579c63cc",
         "android_client_info": {
-          "package_name": "com.gambley1.spaxey"
+          "package_name": "com.example.spaxey"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1033256263772-l83vvc9spuht0a0t7dvu63rgm56ps3v8.apps.googleusercontent.com",
+          "client_id": "427124386853-2u0galdo7k6pulbgm23idnb6b3pecj4k.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD5Kf3l3FQx67MYxBu1sVBoWuyejGaE2VU"
+          "current_key": "AIzaSyBlWongG5kRFQBapkGkC_SMutvJww5tqBY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1033256263772-l83vvc9spuht0a0t7dvu63rgm56ps3v8.apps.googleusercontent.com",
+              "client_id": "427124386853-2u0galdo7k6pulbgm23idnb6b3pecj4k.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "427124386853-58naigcuddpihtu5rleriqof1q4puik6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gamley1.spaxey"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:427124386853:android:9781e89b4e896fe79c63cc",
+        "android_client_info": {
+          "package_name": "com.gambley1.spaxey"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "427124386853-2u0galdo7k6pulbgm23idnb6b3pecj4k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlWongG5kRFQBapkGkC_SMutvJww5tqBY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "427124386853-2u0galdo7k6pulbgm23idnb6b3pecj4k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "427124386853-58naigcuddpihtu5rleriqof1q4puik6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gamley1.spaxey"
+              }
             }
           ]
         }

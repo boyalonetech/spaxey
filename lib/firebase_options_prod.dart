@@ -85,4 +85,5 @@ class DefaultFirebaseOptions {
     authDomain: 'spaxey-prod-8a663.firebaseapp.com',
     storageBucket: 'spaxey-prod-8a663.firebasestorage.app',
   );
+
 }
