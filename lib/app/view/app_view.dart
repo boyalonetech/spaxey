@@ -17,7 +17,7 @@ class AppView extends StatelessWidget {
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       home: const SafeArea(
-        child: Scaffold(body: Text('Hello App')),
+        child: Scaffold(body: Text('Hello World')),
       ),
     );
   }
