@@ -1,29 +1,10 @@
 plugins {
     id("com.android.application")
-    // START: FlutterFire Configuration
-    id("com.google.gms.google-services")
-    // END: FlutterFire Configuration
-    id("org.jetbrains.kotlin.android")
+    id("kotlin-android")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
 
-val localProperties = java.util.Properties()
-val localPropertiesFile = rootProject.file("local.properties")
-if (localPropertiesFile.exists()) {
-    localPropertiesFile.reader(Charsets.UTF_8).use { reader ->
-        localProperties.load(reader)
-    }
-}
-
-val flutterVersionCode: String = localProperties.getProperty("flutter.versionCode") ?: "1"
-val flutterVersionName: String = localProperties.getProperty("flutter.versionName") ?: "1.0"
-
-val keystoreProperties = java.util.Properties()
-val keystorePropertiesFile = rootProject.file("key.properties")
-if (keystorePropertiesFile.exists()) {
-    keystoreProperties.load(java.io.FileInputStream(keystorePropertiesFile))
-}
 
 android {
     namespace = "com.gambley1.spaxey"
@@ -31,49 +12,49 @@ android {
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 
     kotlinOptions {
-        jvmTarget = "17"
+        jvmTarget = JavaVersion.VERSION_11.toString()
     }
 
     defaultConfig {
-        // Base applicationId (no .dev here, suffix handles that)
-        applicationId = "com.gambley1.spaxey"
-        minSdk = maxOf(flutter.minSdkVersion, 24) // ensure API 24+
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        applicationId = "com.example.spaxey"
+        // You can update the following values to match your application needs.
+        // For more information, see: https://flutter.dev/to/review-gradle-config.
+        minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
 
-    // Define flavors
+    // Add these two blocks to define your product flavors
     flavorDimensions += "environment"
 
     productFlavors {
         create("development") {
             dimension = "environment"
-            applicationIdSuffix = ".dev" // → com.gambley1.spaxey.dev
-            resValue("string", "app_name", "Spaxey Dev")
+            // You can customize the application ID for this flavor
+            applicationIdSuffix = ".dev"
+            // You can also change the app's name in this flavor
+            resValue("string", "spaxey", "Spaxey Dev")
         }
         create("production") {
             dimension = "environment"
-            // → com.gambley1.spaxey
-            resValue("string", "app_name", "Spaxey")
+            // Production doesn't need a suffix, as it will use the base applicationId
         }
     }
-
+    
     buildTypes {
-        getByName("release") {
-            // TODO: Replace with your real release signing config
+        release {
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.getByName("debug")
         }
     }
-
-    // Ensure flavor-specific google-services.json files are picked up
-    sourceSets["development"].assets.srcDirs("src/development/assets")
-    sourceSets["production"].assets.srcDirs("src/production/assets")
 }
 
 flutter {
